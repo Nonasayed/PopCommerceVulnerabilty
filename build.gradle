@@ -57,3 +57,14 @@ test {
 
     beforeTest { descriptor -> logger.lifecycle("Running test: ${descriptor}") }
 }
+plugins {
+  id "org.sonarqube" version "4.4.1.3373"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "Nonasayed_BookStoreTest"
+    property "sonar.organization", "nonasayed"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
